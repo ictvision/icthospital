@@ -139,7 +139,7 @@
         background: transparent !important ;
     }
     #sidebar > ul > li > ul.sub > li > a:hover {
-        /*background: #4A8BC2 !important ;*/
+        
     }
 
 
@@ -290,40 +290,6 @@
         margin-bottom: 0;
     }
 
-    .boxed-page .container #sidebar {
-        position:absolute;
-    }
-
-    /*--horizontal menu--*/
-    .full-width .navbar-toggle {
-        border: 1px solid #eaeaea;
-    }
-    .full-width .navbar-toggle .icon-bar {
-        background: #c7c7c7;
-    }
-
-    .full-width .navbar-toggle {
-        float: left;
-        margin-top: 12px;
-    }
-
-    .horizontal-menu {
-        float: left;
-        margin-left:0px;
-        width: 70%;
-        margin-top: 10px;
-    }
-
-    .top-nav {
-        position: absolute;
-        right: 10px;
-        top: 0px;
-    }
-
-    .horizontal-menu .navbar-nav > li > a {
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
     /*-----*/
     .custom-bar-chart {
         margin-bottom: 40px;
@@ -388,44 +354,6 @@
     .chart-position {
        margin-top: 0px;
      }
-    /*--horizontal menu--*/
-    .full-width .navbar-toggle {
-        border: 1px solid #eaeaea;
-    }
-    .full-width .navbar-toggle .icon-bar {
-        background: #c7c7c7;
-    }
-
-    .full-width .navbar-toggle {
-        float: left;
-        margin-top: 12px;
-    }
-
-    .horizontal-menu {
-        float: left;
-        margin-left:0px;
-        width: 100%;
-    }
-
-    .top-nav {
-        position: absolute;
-        right: 10px;
-        top: 0px;
-    }
-
-    .horizontal-menu .navbar-nav > li > a {
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-
-    .ms-container {
-        width: 100%;
-    }
-
-    .cmt-form {
-        display: inline-block;
-        width: 84%;
-    }
 
     .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
         background-color: #ccc;
@@ -551,12 +479,6 @@
 
     .chat-room .mid-side footer .btn-group {
         display: none;
-    }
-
-    .stepy-titles li.current-step div, .stepy-titles li div {
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
     }
 }
 

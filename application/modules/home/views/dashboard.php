@@ -10,13 +10,12 @@
         <link rel="shortcut icon" href="uploads/favicon.png">
         <title><?php echo $this->router->fetch_class(); ?> | <?php echo $this->db->get('settings')->row()->system_vendor; ?> </title>
         <!-- Bootstrap core CSS -->
-        <link href="common/css/bootstrap.min.css" rel="stylesheet">
+        <!-- <link href="common/css/bootstrap.min.css" rel="stylesheet">
         <link href="common/css/bootstrap-reset.css" rel="stylesheet">
-        <!--external css-->
+        
         <link href="common/assets/DataTables/datatables.min.css" rel="stylesheet" />
         <link href="common/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        <!-- Custom styles for this template -->
-        <link href="common/css/style.css" rel="stylesheet">
+                <link href="common/css/style.css" rel="stylesheet">
         <link href="common/css/style-responsive.css" rel="stylesheet" />
         <link rel="stylesheet" href="common/assets/bootstrap-datepicker/css/datepicker.css" />
         <link rel="stylesheet" type="text/css" href="common/assets/bootstrap-daterangepicker/daterangepicker-bs3.css" />
@@ -27,11 +26,26 @@
         <link href="common/assets/fullcalendar/fullcalendar.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="common/assets/select2/css/select2.min.css"/>
         <link rel="stylesheet" type="text/css" href="common/assets/bootstrap-fileupload/bootstrap-fileupload.css" />
-        <link rel="stylesheet" type="text/css" href="common/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+        <link rel="stylesheet" type="text/css" href="common/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css" /> -->
 
 
+ <link href="common/img/favicon.png" rel="icon">
+  <link href="common/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+  <!-- Bootstrap core CSS -->
+  <link href="common/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--external css-->
+  <link href="common/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="common/css/zabuto_calendar.css">
+  <link rel="cstylesheet" type="text/css" href="common/lib/gritter/css/jquery.gritter.css" />
 
+  <link href="common/lib/fullcalendar/fullcalendar.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="common/css/style.css" rel="stylesheet">
+  <link href="common/css/styleold.css" rel="stylesheet">
+  <link href="common/css/style-responsive.css" rel="stylesheet">
+<!--   <script src="common/lib/chart-master/Chart.js"></script>
+ -->
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
         <!--[if lt IE 9]>
@@ -66,7 +80,7 @@
     <body>
         <section id="container" class="">
             <!--header start-->
-            <header class="header white-bg">
+            <header class="header black-bg">
                 <div class="sidebar-toggle-box">
                     <div data-original-title="Toggle Navigation" data-placement="right" class="fa fa-dedent fa-bars tooltips"></div>
                 </div>
@@ -78,10 +92,10 @@
                 //$settings_title = explode(' ', $settings_title);
                 ?>
                 <a href="" class="logo">
-                    <strong>
+                    <b>
                     <?php //echo $settings_title[0]; ?>
                         <!-- <img src="<?php //echo $settings_title[0]; ?>" alt=""> -->
-                        <span>
+                        
                             <?php
                             //if (!empty($settings_title[1])) {
                             if (!empty($settings_title) && $settings_title->logo!='') { 
@@ -89,12 +103,15 @@
                                  echo '<img src="'.$settings_title->logo.'" alt="'.$settings_title->title.'" title="'.$settings_title->title.'" style="height: 30px;">';
                             }else{
 
-                                echo $settings_title->title;
+                                $exp = explode(' ',$settings_title->title);
 
-                            }
+
+                            
                             ?>
-                        </span>
-                    </strong>
+                            <?php echo $exp[0] ?><span><?php echo $exp[1] ?></span>
+                        <?php } ?>
+                       
+                    </b>
                 </a>
                 <!--logo end-->
                 <div class="nav notify-row" id="top_menu">
@@ -105,7 +122,7 @@
                             <li class="dropdown">
                                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                     <i class="fa fa-hdd-o"></i>
-                                    <span class="badge bg-success">  
+                                    <span class="badge bg-theme">  
 
 
 
@@ -458,12 +475,13 @@
             <!--sidebar start-->
 
             <!--sidebar start-->
+            <?=($this->uri->segment(1)==='dashboard')?'active':''?>
             <aside>
                 <div id="sidebar"  class="nav-collapse">
                     <!-- sidebar menu start-->
                     <ul class="sidebar-menu" id="nav-accordion">
                         <li>
-                            <a href="home"> 
+                            <a href="home" class="<?=($this->uri->segment(1)==='home')?'active':$this->uri->segment(1)?>"> 
                                 <i class="fa fa-dashboard"></i>
                                 <span><?php echo lang('dashboard'); ?></span>
                             </a>
@@ -478,7 +496,7 @@
                             <?php } ?>
                         <?php if ($this->ion_auth->in_group('admin')) { ?>
                             <li>
-                                <a href="department">
+                                <a href="department" class="<?=($this->uri->segment(1)==='department')?'active':$this->uri->segment(1)?>">
                                     <i class="fa fa-sitemap"></i>
                                     <span><?php echo lang('departments'); ?></span>
                                 </a>
@@ -491,7 +509,7 @@
                                     <span><?php echo lang('doctor'); ?></span>
                                 </a>
                                 <ul class="sub">
-                                    <li><a href="doctor"><i class="fa fa-user"></i><?php echo lang('list_of_doctors'); ?></a></li>
+                                    <li><a href="doctor" class="<?=($this->uri->segment(1)==='doctor')?'active':$this->uri->segment(1)?>"><i class="fa fa-user"></i><?php echo lang('list_of_doctors'); ?></a></li>
                                     <li><a href="appointment/treatmentReport"><i class="fa fa-money"></i><?php echo lang('treatment_history'); ?></a></li>
                                 </ul>
                             </li>
@@ -499,7 +517,7 @@
                         <?php if ($this->ion_auth->in_group(array('admin', 'Accountant', 'Nurse', 'Doctor', 'Laboratorist', 'Receptionist'))) { ?>
 
                             <li> <li class="sub-menu">
-                                <a href="javascript:;" >
+                                <a href="javascript:;"  class="<?=($this->uri->segment(1)==='patient')?'active':$this->uri->segment(1)?>">
                                     <i class="fa fa-users"></i> 
                                     <span><?php echo lang('patient'); ?></span>
                                 </a>
