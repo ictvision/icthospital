@@ -11,10 +11,11 @@
  <script src="common/lib/jquery/jquery.min.js"></script>
   <script src="common/lib/bootstrap/js/bootstrap.min.js"></script>
 
-<script src="common/assets/js/jquery.js"></script>
+<!-- <script src="common/assets/js/jquery.js"></script>
 <script src="common/assets/js/jquery-1.8.3.min.js"></script>
 <script src="common/assets/js/bootstrap.min.js"></script>
-  <!-- <script class="include" type="text/javascript" src="common/lib/jquery.dcjqaccordion.2.7.js"></script> -->
+  <script class="include" type="text/javascript" src="common/lib/jquery.dcjqaccordion.2.7.js"></script> -->
+  <script class="include" type="text/javascript" src="common/lib/jquery.dcjqaccordion.2.7.js"></script>
   <script src="common/lib/jquery.scrollTo.min.js"></script>
   <script src="common/lib/jquery.nicescroll.js" type="text/javascript"></script>
   <script src="common/lib/jquery.sparkline.js"></script>
@@ -28,7 +29,10 @@
   <script type="text/javascript" src="common/assets/jquery-multi-select/js/jquery.multi-select.js"></script>
 <script type="text/javascript" src="common/assets/jquery-multi-select/js/jquery.quicksearch.js"></script>
   <script type="text/javascript" src="common/lib/DataTables/datatables.min.js"></script>
-  <script type="text/javascript" src="common/assets/ckeditor/ckeditor.js"></script>
+  
+<script type="text/javascript" language="javascript" src="common/lib/advanced-datatable/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="common/lib/advanced-datatable/js/DT_bootstrap.js"></script>
+ <script type="text/javascript" src="common/assets/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="common/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
 <script src="common/js/advanced-form-components.js"></script>
 s

@@ -12,13 +12,13 @@
         <title>Login - <?php echo $this->db->get('settings')->row()->system_vendor; ?></title>
 
         <!-- Bootstrap core CSS -->
-        <link href="common/css/bootstrap.min.css" rel="stylesheet">
-        <link href="common/css/bootstrap-reset.css" rel="stylesheet">
+        <link href="common/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="common/assets/css/bootstrap-reset.css" rel="stylesheet">
         <!--external css-->
         <link href="common/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
         <!-- Custom styles for this template -->
-        <link href="common/css/style.css" rel="stylesheet">
-        <link href="common/css/style-responsive.css" rel="stylesheet" />
+        <link href="common/assets/css/style.css" rel="stylesheet">
+        <link href="common/assets/css/style-responsive.css" rel="stylesheet" />
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
         <!--[if lt IE 9]>
@@ -40,6 +40,16 @@
                     border: none;
 
 
+                }
+
+                .form-signin h2.form-signin-heading {
+
+                    background: #4ecdc4 !important;
+                }
+
+                .login {
+    
+                    color: black!important;
                 }
 
 
@@ -111,8 +121,8 @@
 
 
         <!-- js placed at the end of the document so the pages load faster -->
-        <script src="common/js/jquery.js"></script>
-        <script src="common/js/bootstrap.min.js"></script>
+        <script src="common/assets/js/jquery.js"></script>
+        <script src="common/assets/js/bootstrap.min.js"></script>
 
 
     </body>

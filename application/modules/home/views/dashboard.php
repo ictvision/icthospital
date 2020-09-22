@@ -34,7 +34,14 @@
 
   <!-- Bootstrap core CSS -->
   <link href="common/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!--external css-->
+
+<!--    <link href="common/assets/DataTables/datatables.min.css" rel="stylesheet" />
+ -->  <!--external css-->
+
+  <link href="common/lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+  <link href="common/lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+  <link rel="stylesheet" href="common/lib/advanced-datatable/css/DT_bootstrap.css" />
+  
   <link href="common/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="common/css/zabuto_calendar.css">
   <link rel="cstylesheet" type="text/css" href="common/lib/gritter/css/jquery.gritter.css" />
