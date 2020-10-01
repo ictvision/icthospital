@@ -1,3 +1,4 @@
+
 <footer class="site-footer">
     <div class="text-center">
         20<?php echo date('y'); ?> &copy; <?php echo $this->db->get('settings')->row()->system_vendor; ?> by ICT VISION.
@@ -35,7 +36,14 @@
  <script type="text/javascript" src="common/assets/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="common/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
 <script src="common/js/advanced-form-components.js"></script>
-s
+<script type="text/javascript" src="common/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+<script type="text/javascript" src="common/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+<script type="text/javascript" src="common/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="common/assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+
+
   <script type="text/javascript">
 
 
