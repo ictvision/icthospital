@@ -35,7 +35,7 @@
   <script type="text/javascript" src="common/lib/advanced-datatable/js/DT_bootstrap.js"></script>
  <script type="text/javascript" src="common/assets/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="common/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
-<script src="common/js/advanced-form-components.js"></script>
+<!-- <script src="common/js/advanced-form-components.js"></script> -->
 <script type="text/javascript" src="common/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 
 <script type="text/javascript" src="common/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
@@ -187,13 +187,13 @@ if ($language == 'english') {
         autoclose: true
     });
 
-     $('.default-date-picker1').datetimepicker({
+     /*$('.default-date-picker1').datetimepicker({
 
             minView: 2,
             format: 'dd-mm-yyyy HH:ii p',
             startDate: new Date,
             autoclose: true,
-     });
+     });*/
 
 
     $('#date').on('changeDate', function () {
@@ -211,7 +211,7 @@ if ($language == 'english') {
 <script type="text/javascript">
 
     $(document).ready(function () {
-        $('#calendar').fullCalendar({
+        /*$('#calendar').fullCalendar({
             lang: 'en',
             events: 'appointment/getAppointmentByJason',
             header:
@@ -219,7 +219,7 @@ if ($language == 'english') {
                         left: 'prev,next today',
                         center: 'title',
                         right: 'month,agendaWeek,agendaDay',
-                    },
+                    },*/
             /*    timeFormat: {// for event elements
              'month': 'h:mm TT A {h:mm TT}', // default
              'week': 'h:mm TT A {h:mm TT}', // default
@@ -245,8 +245,9 @@ if ($language == 'english') {
             allDayDefault: false,
             displayEventEnd: true,
             timezone: false,
+            */
 
-        });
+        //});
     });
 
 </script>
@@ -286,7 +287,7 @@ if ($language == 'english') {
 <script type="text/javascript">
 
     $(document).ready(function () {
-        var windowH = $(window).height();
+        /*var windowH = $(window).height();
         var wrapperH = $('#container').height();
         if (windowH > wrapperH) {
             $('#sidebar').css('height', (windowH) + 'px');
@@ -296,7 +297,7 @@ if ($language == 'english') {
         var windowSize = window.innerWidth;
         if (windowSize < 768) {
             $('#sidebar').removeAttr('style');
-        }
+        }*/
     });
     function onElementHeightChange(elm, callback) {
         var lastHeight = elm.clientHeight, newHeight;
@@ -314,7 +315,7 @@ if ($language == 'english') {
 
 
     
-     onElementHeightChange(document.body, function () {
+     /*onElementHeightChange(document.body, function () {
      var windowH = $(window).height();
      var wrapperH = $('#container').height();
      if (windowH > wrapperH) {
@@ -327,21 +328,22 @@ if ($language == 'english') {
      if (windowSize < 768) {
      $('#sidebar').removeAttr('style');
      }
-     });
+     });*/
      
      
 
 
 
 
-
+/*
     $(window).resize(function () {
 
+           width = GetWidth();
         if (width == GetWidth()) {
             return;
         }
 
-        width = GetWidth();
+       
 
         if (width < 600) {
             $('#sidebar').hide();
@@ -349,7 +351,7 @@ if ($language == 'english') {
             $('#sidebar').show();
         }
 
-    });
+    });*/
 
 
 </script>
@@ -358,10 +360,10 @@ if ($language == 'english') {
 
 
 <script>
-    CKEDITOR.replace("description",
+    /*CKEDITOR.replace("description",
             {
                 height: 400
-            });
+            });*/
 </script>
 
 

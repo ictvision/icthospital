@@ -487,7 +487,7 @@
                 <div id="sidebar"  class="nav-collapse">
                     <!-- sidebar menu start-->
                     <ul class="sidebar-menu" id="nav-accordion">
-                        <li>
+                        <li class="mt">
                             <a href="home" class="<?=($this->uri->segment(1)==='home')?'active':$this->uri->segment(1)?>"> 
                                 <i class="fa fa-dashboard"></i>
                                 <span><?php echo lang('dashboard'); ?></span>
